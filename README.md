@@ -30,4 +30,4 @@ Approach
 
 Author
 
-Richard Tripodi – Manual QA | Functional Analyst – Banking and Fintech | Email: richardtripodi15@gmail.com
+Matias Tripodi – Manual QA | Functional Analyst – Banking and Fintech | Email: matiasrtripodi@gmail.com
