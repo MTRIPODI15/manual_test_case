@@ -17,13 +17,13 @@ The balances of both accounts are known before each test
 ### Steps
 
 1. Open https://parabank.parasoft.com and log in with valid credentials.
-2. Go to Accounts Overview and write down the balances of Account A and Account B. [Evidence TC_1_1](https://github.com/richardtripodi15-cmyk/manual_test_case/blob/main/images/TC_1_1.png)
+2. Go to Accounts Overview and write down the balances of Account A and Account B. [Evidence TC_1_1](https://github.com/MTRIPODI15/manual_test_case/blob/main/images/TC_1_1.png)
 4. Go to Transfer Funds.
 5. Enter amount 100.00.
 6. Select Account A in "From account" and Account B in "To account".
-7. Click Transfer.[Evidence TC_1_2](https://github.com/richardtripodi15-cmyk/manual_test_case/blob/main/images/TC_1_2.png)
+7. Click Transfer.[Evidence TC_1_2](https://github.com/MTRIPODI15/manual_test_case/blob/main/images/TC_1_2.png)
 8. Go to Accounts Overview.
-9. Open the activity of Account A, and then the activity of Account B. [Evidence TC_1_3](https://github.com/richardtripodi15-cmyk/manual_test_case/blob/main/images/TC_1_3.png), [Evidence TC_1_4](https://github.com/richardtripodi15-cmyk/manual_test_case/blob/main/images/TC_1_4.png)
+9. Open the activity of Account A, and then the activity of Account B. [Evidence TC_1_3](https://github.com/MTRIPODI15/manual_test_case/blob/main/images/TC_1_3.png), [Evidence TC_1_4](https://github.com/MTRIPODI15/manual_test_case/blob/main/images/TC_1_4.png)
 
 Expected result
 
@@ -43,11 +43,11 @@ Actual result: Completed without incident.
 
 Steps
 
-1. Log in and write down the balance of Account A. [Evidence TC_2_1](https://github.com/richardtripodi15-cmyk/manual_test_case/blob/main/images/TC_2_1.png)
+1. Log in and write down the balance of Account A. [Evidence TC_2_1](https://github.com/MTRIPODI15/manual_test_case/blob/main/images/TC_2_1.png)
 2. Go to Transfer Funds.
-3. Enter an amount 1.00 higher than the balance of Account A. [Evidence TC_2_2](https://github.com/richardtripodi15-cmyk/manual_test_case/blob/main/images/TC_2_2.png)
+3. Enter an amount 1.00 higher than the balance of Account A. [Evidence TC_2_2](https://github.com/MTRIPODI15/manual_test_case/blob/main/images/TC_2_2.png)
 4. Select Account A as source and Account B as destination.
-5. Click Transfer. [Evidence TC_2_3](https://github.com/richardtripodi15-cmyk/manual_test_case/blob/main/images/TC_2_3.png)
+5. Click Transfer. [Evidence TC_2_3](https://github.com/MTRIPODI15/manual_test_case/blob/main/images/TC_2_3.png)
 
 Expected result
 
@@ -55,7 +55,7 @@ The transfer is rejected with a clear message about insufficient funds.
 The balances of Account A and Account B do not change.
 No new entries appear in the activity of either account.
 
-Actual result: Unsuccessful result. It was evidenced that the system allowed transfers to be made despite having insufficient funds. It processed the credits and debits without taking the balance limit into account. A possible reason is that the account may have an overdraft transfer facility (unbacked), but this needs to be verified. [ID Bug-01](https://github.com/richardtripodi15-cmyk/manual_test_case/blob/main/Bug_report_1.md)
+Actual result: Unsuccessful result. It was evidenced that the system allowed transfers to be made despite having insufficient funds. It processed the credits and debits without taking the balance limit into account. A possible reason is that the account may have an overdraft transfer facility (unbacked), but this needs to be verified. [ID Bug-01](https://github.com/MTRIPODI15/manual_test_case/blob/main/Bug_report_1.md)
 
 ## TC-03 – Transfer with empty amount
 
@@ -68,16 +68,16 @@ Actual result: Unsuccessful result. It was evidenced that the system allowed tra
 Steps
 
 1. Log in and go to Transfer Funds.
-2. Leave the amount field empty.[Evidence TC_3_1](https://github.com/richardtripodi15-cmyk/manual_test_case/blob/main/images/TC_3_1.png)
+2. Leave the amount field empty.[Evidence TC_3_1](https://github.com/MTRIPODI15/manual_test_case/blob/main/images/TC_3_1.png)
 3. Select Account A as source and Account B as destination.
-4. Click Transfer.[Evidence TC_3_2](https://github.com/richardtripodi15-cmyk/manual_test_case/blob/main/images/TC_3_2.png)
+4. Click Transfer.[Evidence TC_3_2](https://github.com/MTRIPODI15/manual_test_case/blob/main/images/TC_3_2.png)
 
 Expected result
 
 A validation message asks the user to enter an amount.
 The transfer is not processed and the balances do not change.
 
-Actual result: Unsuccessful result. The system response is not as expected, although it functionally prevents monetary losses. [ID Bug-02](https://github.com/richardtripodi15-cmyk/manual_test_case/blob/main/Bug_report_2.md)
+Actual result: Unsuccessful result. The system response is not as expected, although it functionally prevents monetary losses. [ID Bug-02](https://github.com/MTRIPODI15/manual_test_case/blob/main/Bug_report_2.md)
 
 ## TC-04 – Transfer with invalid amount values
 
@@ -100,7 +100,7 @@ Expected result
 For each value, the system shows a validation message.
 No transfer is processed and the balances do not change.
 
-Actual result: Unsuccessful result. The system allows transfers to be made with negative values and zero amounts. [ID Bug-03](https://github.com/richardtripodi15-cmyk/manual_test_case/blob/main/Bug_report_3.md)
+Actual result: Unsuccessful result. The system allows transfers to be made with negative values and zero amounts. [ID Bug-03](https://github.com/MTRIPODI15/manual_test_case/blob/main/Bug_report_3.md)
 
 ## TC-05 – Transfer to the same account
 
@@ -123,7 +123,7 @@ Expected result
 The system rejects the operation with a message saying that source and destination must be different.
 The balance of Account A does not change and no entries are added to its activity.
 
-Actual result: Unexpected outcome. The system allowed a transfer where the source and destination accounts were the same.[ID Bug-04](https://github.com/richardtripodi15-cmyk/manual_test_case/blob/main/Bug_report_4.md)
+Actual result: Unexpected outcome. The system allowed a transfer where the source and destination accounts were the same.[ID Bug-04](https://github.com/MTRIPODI15/manual_test_case/blob/main/Bug_report_4.md)
 
 Execution summary
 |ID|Title|Type|Priority|	Status|
